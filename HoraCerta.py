@@ -8,5 +8,5 @@ h = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l
 url = get('https://www.horariodebrasilia.org', headers=h)
 page = bs(url.content, 'html5lib')
 
-horaa = page.find('p', attrs={'id':'relogio'})
-hora = horaa.text
+horaid = page.find('p', attrs={'id':'relogio'})
+hora = horaid.text

@@ -7,12 +7,11 @@ h = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l
 
 url = get('https://www.wikidates.org/br/data-de-hoje.html', headers=h)
 page = bs(url.content, 'html5lib')
-d = page.find('p')
-dia = d.text
-
+diap = page.find('p')
+dia = diap.text
 diat = dia.replace('• A data de hoje: ', '')
 diafinal = diat.replace('.', '')
 
-diaa = page.find(id="dmenudate")
-dias = diaa.text
+diaid = page.find(id="dmenudate")
+dias = diaid.text
 diasemana = dias.replace(', 29 março 2022 (Semana: 13)', '')
