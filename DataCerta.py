@@ -14,6 +14,5 @@ dia = d.text
 diat = dia.replace('• A data de hoje: ', '')
 diafinal = diat.replace('.', '')
 
-diasemana = page.find_all('div', class_="tbms)")
-print(diafinal)
-print(diasemana)
+diaa = page.find_all("div", class_="tbms")
+print(page)
