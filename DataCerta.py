@@ -10,7 +10,7 @@ page = bs(url.content, 'html5lib')
 diap = page.find('p')
 dia = diap.text
 diat = dia.replace('• A data de hoje: ', '')
-diafinal = diat.replace('.', '')
+dma = diat.replace('.', '')
 
 diaid = page.find(id="dmenudate")
 dias = diaid.text
