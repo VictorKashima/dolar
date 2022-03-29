@@ -1,5 +1,4 @@
 #CAPTAR DATA EM TEMPO REAL
-from HoraCerta import hora
 from requests import get
 from bs4 import BeautifulSoup as bs
 import html5lib
@@ -14,5 +13,6 @@ dia = d.text
 diat = dia.replace('• A data de hoje: ', '')
 diafinal = diat.replace('.', '')
 
-diaa = page.find_all("div", class_="tbms")
-print(page)
+diaa = page.find(id="dmenudate")
+dias = diaa.text
+diasemana = dias.replace(', 29 março 2022 (Semana: 13)', '')
