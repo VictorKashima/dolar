@@ -1,4 +1,4 @@
-#CAPTAR HORARIO EM TEMPO REAL.
+#CAPTAR HORARIO EM TEMPO REAL
 from requests import get
 from bs4 import BeautifulSoup as bs
 import html5lib
