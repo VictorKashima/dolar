@@ -1,4 +1,4 @@
-#CAPTAR DOLAR EM TEMPO REAL
+#CAPTAR VALOR DO DOLAR EM TEMPO REAL
 from requests import get
 from bs4 import BeautifulSoup as bs
 import html5lib 

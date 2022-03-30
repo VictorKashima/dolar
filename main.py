@@ -1,4 +1,4 @@
-#ARQUIVO PRINCIPAL
+#EXECUTE ESTE ARQUIVO
 from DataCerta import dma, diasemana
 from DolarCerto import dolar
 from HoraCerta import hora
