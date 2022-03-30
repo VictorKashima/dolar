@@ -1,5 +1,5 @@
-#ARQUIVO PRINCIPAL.
-#EXECUTE ESTE ARQUIVO.
+#ARQUIVO PRINCIPAL
+#EXECUTE ESTE ARQUIVO
 from DataCerta import data, diasemana
 from DolarCerto import dolar
 from HoraCerta import hora
