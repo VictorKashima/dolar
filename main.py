@@ -1,7 +1,7 @@
 #ARQUIVO PRINCIPAL
-from DataCerta import dma, diasemana
-from DolarCerto import dolar
-from HoraCerta import hora
+from .captura.DataCerta import dma, diasemana
+from .captura.DolarCerto import dolar
+from .captura.HoraCerta import hora
 
 sett = ''
 
