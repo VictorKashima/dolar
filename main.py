@@ -1,7 +1,7 @@
 #ARQUIVO PRINCIPAL
-from .captura.DataCerta import dma, diasemana
-from .captura.DolarCerto import dolar
-from .captura.HoraCerta import hora
+from DataCerta import dma, diasemana
+from DolarCerto import dolar
+from HoraCerta import hora
 
 sett = ''
 
@@ -10,7 +10,7 @@ while True:
     print('$ COTAÇÃO DO DÓLAR EM TEMPO REAL $')
     print('- '*20)
 
-    sett = int(input('DIGITE 1 PARA COTAÇÃO DO DÓLAR.\nDIGITE 2 PARA CONVERTER DÓLAR.\nDIGITE 3 PARA SAIR\n'))
+    sett = int(input('DIGITE 1 PARA COTAÇÃO DO DÓLAR.\nDIGITE 2 PARA CONVERTER DÓLAR.\nDIGITE 3 PARA SAIR.\n'))
     print('- '*20)
 
     if sett == 1:
@@ -19,7 +19,7 @@ while True:
         print(f'1$ = R${dolar}')
 
     elif sett == 2:
-        set2 = int(input('DIGITE 1 PARA CONVERTER DÓLAR PARA REAL\nDIGITE 2 PARA CONVERTER REAL PARA DÓLAR\n'))
+        set2 = int(input('DIGITE 1 PARA CONVERTER DÓLAR PARA REAL.\nDIGITE 2 PARA CONVERTER REAL PARA DÓLAR.\n'))
         print('- '*20)
         if set2 == 1:
             dol = float(input('DIGITE O VALOR EM DÓLAR:'))
@@ -34,8 +34,7 @@ while True:
         else:
             print('POR FAVOR, DIGITE 1 OU 2')
     elif sett == 3:
+        print('PROGRAMA ENCERRADO')
         break
     else:
         print('POR FAVOR, DIGITE 1 OU 2')
-
-    print('- '*20)
