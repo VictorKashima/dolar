@@ -1,4 +1,6 @@
 #CAPTAR DATA EM TEMPO REAL.
+from re import A
+from smtplib import quotedata
 from requests import get
 from bs4 import BeautifulSoup as bs
 import html5lib
@@ -7,11 +9,29 @@ h = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l
 
 url = get('https://www.wikidates.org/br/data-de-hoje.html', headers=h)
 page = bs(url.content, 'html5lib')
-diap = page.find('p')
-dia = diap.text
-diat = dia.replace('• A data de hoje: ', '')
-dma = diat.replace('.', '')
+d = page.find('p')
+da = d.text
+dat = da.replace('• A data de hoje: ', '')
+data = dat.replace('.', '')
+
 
 diaid = page.find(id="dmenudate")
 dias = diaid.text
-diasemana = dias.replace(', 29 março 2022 (Semana: 13)', '')
+diase = dias[:3]
+
+if diase == 'seg':
+    diasemana = 'Segunda'
+elif diase == 'ter':
+    diasemana = 'Terça'
+elif diase == 'qua':
+    diasemana = 'Quarta'
+elif diase == 'qui':
+    diasemana = 'Quinta'
+elif diase == 'sex':
+    diasemana = 'Sexta'
+elif diase == 'sab':
+    diasemana = 'Sábado'
+elif diase == 'dom':
+    diasemana = 'Domingo'
+else:
+    diasemana = 'Não identificado'
