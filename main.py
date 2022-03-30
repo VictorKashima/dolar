@@ -1,4 +1,4 @@
-#EXECUTE ESTE ARQUIVO
+#EXECUTE ESTE ARQUIV
 from DataCerta import dma, diasemana
 from DolarCerto import dolar
 from HoraCerta import hora
